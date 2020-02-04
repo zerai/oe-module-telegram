@@ -1,11 +1,38 @@
 {
     "name": "zerai/oe-module-telegram",
     "license": "MIT",
+    "description": "OpenEMR Fax and SMS module",
+    "type": "openemr-module",
     "authors": [
         {
             "name": "zerai",
             "email": "teclaizerai@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "php": "^7.2",
+        "openemr/oe-module-installer-plugin": "^0.1.3",
+        "symfony/notifier": "^5.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.0"
+    },
+    "config": {
+        "preferred-install": {
+            "*": "dist"
+        },
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "OpenEMR\\Modules\\TelegramNotifier\\": "src/",
+            "Zerai\\ModulesIsolation\\": "lib/modules-isolation/src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "OpenEMR\\Modules\\TelegramNotifier\\Tests\\": "tests/",
+            "Zerai\\ModulesIsolation\\": "lib/modules-isolation/tests/"
+        }
+    }
 }
