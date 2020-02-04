@@ -1,0 +1,11 @@
+{
+    "name": "zerai/oe-module-telegram",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "zerai",
+            "email": "teclaizerai@gmail.com"
+        }
+    ],
+    "require": {}
+}
