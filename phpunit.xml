@@ -10,14 +10,19 @@
             <directory>tests/Unit</directory>
         </testsuite>
 
+        <testsuite name="lib">
+            <directory>lib/modules-isolation/tests</directory>
+        </testsuite>
+
         <testsuite name="learn-notifier">
             <directory>tests/LearnNotifier</directory>
         </testsuite>
     </testsuites>
 
     <filter>
-        <whitelist processUncoveredFilesFromWhitelist="true">
-            <directory suffix=".php">src</directory>
+        <whitelist>
+            <directory>src</directory>
+            <directory>lib/modules-isolation/src</directory>
         </whitelist>
     </filter>
 
