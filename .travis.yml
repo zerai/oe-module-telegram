@@ -45,7 +45,7 @@ cache:
       composer install --no-progress --no-suggest --ansi
 
   - &lint-composer |
-      composer validate --strict --no-check-lock --ansi -vvv
+      composer validate --no-check-publish --no-check-lock --ansi -vvv
 
   - &run-phpunit-tests-with-coverage |
       ./vendor/bin/phpunit --colors=always --coverage-clover=coverage-report.clover --log-junit=test-report.xml
