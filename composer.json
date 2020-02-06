@@ -3,6 +3,7 @@
     "license": "MIT",
     "description": "OpenEMR Telegram notification module",
     "type": "openemr-module",
+    "version": "0.1.3",
     "authors": [
         {
             "name": "zerai",
