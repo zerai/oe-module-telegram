@@ -1,8 +1,9 @@
 {
     "name": "zerai/oe-module-telegram",
     "license": "MIT",
-    "description": "OpenEMR Fax and SMS module",
+    "description": "OpenEMR Telegram notification module",
     "type": "openemr-module",
+    "version": "0.1.3",
     "authors": [
         {
             "name": "zerai",
@@ -17,7 +18,7 @@
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^2.16",
-        "phpunit/phpunit": "^8.0"
+        "phpunit/phpunit": "~8.4"
     },
     "config": {
         "preferred-install": {
