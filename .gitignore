@@ -2,6 +2,7 @@
 
 /vendor
 /extra
+/var
 /LearnNotifier
 
 composer.lock
