@@ -5,7 +5,7 @@
     "type": "openemr-module",
     "authors": [
         {
-            "name": "zerai",
+            "name": "Teclai Zerai",
             "email": "teclaizerai@gmail.com"
         }
     ],
@@ -35,6 +35,11 @@
         "psr-4": {
             "OpenEMR\\Modules\\TelegramNotifier\\Tests\\": "tests/",
             "Zerai\\ModulesIsolation\\": "lib/modules-isolation/tests/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "2.0.x-dev"
         }
     }
 }
