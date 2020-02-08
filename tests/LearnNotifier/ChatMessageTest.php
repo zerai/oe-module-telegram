@@ -7,6 +7,7 @@ use PHPUnit\Framework\TestCase;
 use Symfony\Component\Notifier\Message\ChatMessage;
 use Symfony\Component\Notifier\Notification\Notification;
 use Symfony\Component\Notifier\Recipient\Recipient;
+use Symfony\Component\Notifier\Transport;
 
 class ChatMessageTest extends TestCase
 {
@@ -38,6 +39,27 @@ class ChatMessageTest extends TestCase
         self::assertNotNull($message->getNotification());
         self::assertEquals(self::IRRELEVANT_MESSAGE, $message->getNotification()->getSubject());
     }
+
+    /** @test */
+    public function can_be_created_from_factory_method_with_transport(): void
+    {
+        $channel = 'fooChannel';
+        $telegramTransportString = sprintf('telegram://%s?channel=%s', 'testHost', $channel);
+
+        $notification = new Notification(self::IRRELEVANT_MESSAGE);
+        $recipient = new Recipient('joe.doe@example.com');
+
+
+        $message = ChatMessage::fromNotification($notification, $recipient, $telegramTransportString);
+
+        self::assertInstanceOf(ChatMessage::class, $message);
+        self::assertEquals(self::IRRELEVANT_MESSAGE, $message->getSubject());
+        self::assertNull($message->getOptions());
+        self::assertNull($message->getTransport());
+        self::assertNotNull($message->getNotification());
+        self::assertEquals(self::IRRELEVANT_MESSAGE, $message->getNotification()->getSubject());
+    }
+
 
     /** @test */
     public function can_change_the_message(): void
