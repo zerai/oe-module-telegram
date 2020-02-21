@@ -7,7 +7,6 @@ use PHPUnit\Framework\TestCase;
 use Symfony\Component\Notifier\Message\ChatMessage;
 use Symfony\Component\Notifier\Notification\Notification;
 use Symfony\Component\Notifier\Recipient\Recipient;
-use Symfony\Component\Notifier\Transport;
 
 class ChatMessageTest extends TestCase
 {

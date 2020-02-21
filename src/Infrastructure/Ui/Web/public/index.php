@@ -2,8 +2,6 @@
 declare(strict_types=1);
 require_once(__DIR__ . "/../../../../../../../../globals.php");
 
-use OpenEMR\Modules\TelegramNotifier\Infrastructure\Ui\FooController;
-use OpenEMR\Modules\TelegramNotifier\Infrastructure\Ui\BarController;
 
 echo "Module Telegram - index";
 

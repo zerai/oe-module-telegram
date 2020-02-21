@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace OpenEMR\Modules\TelegramNotifier\Tests\Unit;
+namespace OpenEMR\Modules\TelegramNotifier\Tests\LearnNotifier;
 
 use PHPUnit\Framework\TestCase;
 
