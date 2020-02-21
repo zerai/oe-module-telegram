@@ -22,9 +22,6 @@
         "vlucas/phpdotenv": "^3.6"
     },
     "config": {
-        "preferred-install": {
-            "*": "dist"
-        },
         "sort-packages": true
     },
     "autoload": {
