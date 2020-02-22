@@ -20,6 +20,7 @@
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^2.16",
         "phpunit/phpunit": "~8.4",
+        "prolic/fpp": "@dev",
         "vimeo/psalm": "^3.9",
         "vlucas/phpdotenv": "^3.6"
     },
@@ -35,7 +36,7 @@
     "autoload-dev": {
         "psr-4": {
             "OpenEMR\\Modules\\TelegramNotifier\\Tests\\": "tests/",
-            "Zerai\\ModulesIsolation\\": "lib/modules-isolation/tests/"
+            "Zerai\\ModulesIsolation\\Test\\": "lib/modules-isolation/tests/"
         }
     },
     "extra": {
