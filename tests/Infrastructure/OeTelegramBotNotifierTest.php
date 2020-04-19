@@ -20,12 +20,22 @@ class OeTelegramBotNotifierTest extends TestCase
         self::assertInstanceOf(OeTelegramBotNotifier::class, $telegramBotNotifier);
     }
 
-    /** @test */
-    public function empty_credential_throw_exception(): void
+    /**
+     * @test
+     * @dataProvider  empty_credentials_provider
+     */
+    public function empty_credential_throw_exception(string $token, string $chatId): void
     {
         self::expectException(\InvalidArgumentException::class);
 
-        new OeTelegramBotNotifier('', '');
+        new OeTelegramBotNotifier($token, $chatId);
+    }
+
+    public function empty_credentials_provider(): \Generator
+    {
+        yield 'All empty set' => ['',''];
+        yield 'Token empty set' => ['',self::CHAT_ID];
+        yield 'Chat id empty set' => [self::TOKEN, ''];
     }
 
     // TODO mock

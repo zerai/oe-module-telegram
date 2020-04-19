@@ -31,7 +31,9 @@ class OeTelegramBotNotifier
         $this->logger = $logger ?? new NullLogger();
     }
 
+
     /**
+     * @param MessageInterface $message
      * @throws TransportExceptionInterface
      */
     public function send(MessageInterface $message): void
@@ -40,9 +42,15 @@ class OeTelegramBotNotifier
             $this->telegramTransport->send($message);
         } catch (\Exception $exception) {
             $this->logger->error($exception->getMessage());
+            throw $exception;
         }
     }
 
+
+    /**
+     * @param string $token
+     * @param string $chatId
+     */
     public function withCredentials(string $token, string $chatId): void
     {
         if (empty($token)) {

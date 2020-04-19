@@ -32,17 +32,17 @@ class NotifierServiceTest extends TestCase
         self::assertInstanceOf(ChatterInterface::class, $chatterNotifierService);
     }
 
-    /** @test */
-    public function it_works(): void
-    {
-        $chatMessage = new ChatMessage('Hello world!!');
-        //'null://null'
-        //'telegram://{TOKEN}@default?channel={CHAT_ID}';
-        $telegram = Transport::fromDsn('null://null');
-
-        $telegram->send($chatMessage);
-        //TODO underscore cause error 'Bad Request: can't parse entities: Can't find end of the entity starting at byte offset 5 (400).'
-        //$chatMessage = new ChatMessage('Hello_world!!');
-        //$telegram->send($chatMessage);
-    }
+//    /** @test */
+//    public function it_works(): void
+//    {
+//        $chatMessage = new ChatMessage('Hello world!!');
+//        //'null://null'
+//        //'telegram://{TOKEN}@default?channel={CHAT_ID}';
+//        $telegram = Transport::fromDsn('null://null');
+//
+//        $telegram->send($chatMessage);
+//        //TODO underscore cause error 'Bad Request: can't parse entities: Can't find end of the entity starting at byte offset 5 (400).'
+//        //$chatMessage = new ChatMessage('Hello_world!!');
+//        //$telegram->send($chatMessage);
+//    }
 }
