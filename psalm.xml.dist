@@ -1,19 +1,23 @@
 <?xml version="1.0"?>
 <psalm
-    totallyTyped="false"
-    errorLevel="8"
-    resolveFromConfigFile="true"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns="https://getpsalm.org/schema/config"
     xsi:schemaLocation="https://getpsalm.org/schema/config vendor/vimeo/psalm/config.xsd"
->
+    errorLevel="8"
+    totallyTyped="false"
+    cacheDirectory="var/psalm">
+
     <projectFiles>
-        <directory name="src" />
-        <directory name="lib/modules-isolation/src" />
-        <ignoreFiles>
-            <directory name="vendor" />
-            <directory name="var" />
-            <directory name="extra" />
+        <directory name="src/" />
+        <directory name="lib/modules-isolation/src/" />
+        <ignoreFiles allowMissingFiles="true">
+            <directory name="vendor/" />
+            <directory name="var/" />
+            <directory name="extra/" />
         </ignoreFiles>
     </projectFiles>
+
+    <mockClasses>
+        <class name="PHPUnit\Framework\MockObject\MockObject"/>
+    </mockClasses>
 </psalm>
