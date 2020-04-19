@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Zerai\ModulesIsolation\Unit;
+namespace Zerai\ModulesIsolation\Test\Unit;
 
 use PHPUnit\Framework\TestCase;
 use Zerai\ModulesIsolation\Contract\FileSystem;
