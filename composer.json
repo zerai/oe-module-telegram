@@ -1,15 +1,14 @@
 {
     "name": "zerai/oe-module-telegram",
-    "license": "MIT",
-    "description": "OpenEMR Telegram notification module",
     "type": "openemr-module",
+    "description": "OpenEMR Telegram notification module",
+    "license": "MIT",
     "authors": [
         {
             "name": "Teclai Zerai",
             "email": "teclaizerai@gmail.com"
         }
     ],
-    "minimum-stability": "stable",
     "require": {
         "php": "^7.2.5",
         "openemr/oe-module-installer-plugin": "^0.1.3",
@@ -28,6 +27,11 @@
     "config": {
         "sort-packages": true
     },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "2.0.x-dev"
+        }
+    },
     "autoload": {
         "psr-4": {
             "OpenEMR\\Modules\\TelegramNotifier\\": "src/",
@@ -40,9 +44,5 @@
             "Zerai\\ModulesIsolation\\Test\\": "lib/modules-isolation/tests/"
         }
     },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "2.0.x-dev"
-        }
-    }
+    "minimum-stability": "stable"
 }
